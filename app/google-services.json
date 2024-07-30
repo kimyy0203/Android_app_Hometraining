@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "529847231567",
+    "project_id": "hometraininghelper-73bba",
+    "storage_bucket": "hometraininghelper-73bba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529847231567:android:0ccad399dc3bf2c453b63a",
+        "android_client_info": {
+          "package_name": "com.example.hometraininghelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529847231567-grp343st6j2urkpj3qi8sbvcojf339hn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hometraininghelper",
+            "certificate_hash": "fd4de55bd4ed3c9ac75c56236d98ca25af3eda74"
+          }
+        },
+        {
+          "client_id": "529847231567-34s5l3bf8cf2r4m4c6e4ok6u748vefp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh83ABokXeuuKCN2LqkUhrZdX-dQsSiLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529847231567-34s5l3bf8cf2r4m4c6e4ok6u748vefp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
