@@ -47,7 +47,8 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="d546f0ea15476db798ff89f1e7a1e45f" />
+            android:value="63a090dfffb5b8ef3255ea2f2a67ed49" />
+        <!--android:value="d546f0ea15476db798ff89f1e7a1e45f"-->
 
         <activity android:name=".ArmEasyActivity" />
         <activity android:name=".ArmNorActivity" />
@@ -76,7 +77,7 @@
         <activity android:name=".StretchLowerActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".BmiActivity" />
-        <activity android:name=".FavoritesActivity" />
+        <!-- <activity android:name=".FavoritesActivity" /> -->
         <activity android:name=".AfterActivity" />
         <activity android:name=".SearchActivity" />
 

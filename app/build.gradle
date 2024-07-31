@@ -56,6 +56,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
     implementation 'com.google.android.gms:play-services-auth:17.0.0' // 구글
-    // implementation 'com.facebook.android:facebook-login:[5,6)' // 페이스북 SDK (기존)
+    implementation 'com.facebook.android:facebook-login:[5,6)' // 페이스북 SDK (기존)
     implementation 'com.facebook.android:facebook-android-sdk:latest.release' // 페이스북 SDK (최신)
 }
