@@ -6,7 +6,7 @@
         android:icon="@drawable/search"
         android:title="운동 검색" />
 
-    <item android:title="운동">
+    <item android:title="운동(홈트)">
         <menu>
             <group android:checkableBehavior="single">
                 <item
@@ -38,6 +38,42 @@
                     android:id="@+id/nav_stretching"
                     android:icon="@drawable/stretchmenu"
                     android:title="스트레칭" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="운동(헬스)">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_weight_shoulder"
+                    android:icon="@drawable/shouldermenu"
+                    android:title="어깨" />
+
+                <item
+                    android:id="@+id/nav_weight_arm"
+                    android:icon="@drawable/armmenu"
+                    android:title="팔" />
+
+                <item
+                    android:id="@+id/nav_weight_chest"
+                    android:icon="@drawable/chestmenu"
+                    android:title="가슴" />
+
+                <item
+                    android:id="@+id/nav_weight_back"
+                    android:icon="@drawable/backmenu"
+                    android:title="등" />
+
+                <item
+                    android:id="@+id/nav_weight_leg"
+                    android:icon="@drawable/legmenu"
+                    android:title="하체" />
+
+                <item
+                    android:id="@+id/nav_weight_diet"
+                    android:icon="@drawable/dietmenu"
+                    android:title="다이어트" />
             </group>
         </menu>
     </item>
