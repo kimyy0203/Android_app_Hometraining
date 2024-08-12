@@ -1,41 +1,29 @@
-package com.example.hometraininghelper; // 카카오 로그인 수행후
+package com.example.hometraininghelper;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.bumptech.glide.Glide;
 import com.google.android.material.navigation.NavigationView;
-import com.kakao.usermgmt.UserManagement;
-import com.kakao.usermgmt.callback.LogoutResponseCallback;
 
-public class SubActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener
-{
-    private String strNick, strProfileImg, strEmail;
+public class ShoulderLateralRaiseActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    ImageButton btn_bmi;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub);
+        setContentView(R.layout.activity_shoulder_lateral_raise);
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.design_navigation_view);
@@ -47,59 +35,13 @@ public class SubActivity extends Activity implements NavigationView.OnNavigation
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
-
-        btn_bmi = findViewById(R.id.bmi); // BMI
-
-        btn_bmi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), BmiActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Intent intent = getIntent();
-        strNick = intent.getStringExtra("name");
-        strProfileImg = intent.getStringExtra("profileImg");
-        strEmail = intent.getStringExtra("email");
-
-        TextView tv_nick = findViewById(R.id.tv_nickName);
-        TextView tv_email = findViewById(R.id.tv_email);
-        ImageView iv_profile = findViewById(R.id.iv_profile);
-
-        // 닉네임 set
-        tv_nick.setText(strNick);
-        // 이메일 set
-        tv_email.setText(strEmail);
-        // 프로필 이미지 사진 set
-        Glide.with(this).load(strProfileImg).into(iv_profile);
-
-        // 로그아웃
-        findViewById(R.id.btn_logout).setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view)
-            {
-                UserManagement.getInstance().requestLogout(new LogoutResponseCallback()
-                {
-                    @Override
-                    public void onCompleteLogout()
-                    {
-                        // 로그아웃 성공시 수행하는 지점
-                        finish(); // 현재 액티비티 종료
-                    }
-                });
-            }
-        });
     }
-
     @Override
     public void onBackPressed() {
 
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }
-        else {
+        } else {
             super.onBackPressed();
         }
     }

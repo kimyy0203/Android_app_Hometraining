@@ -77,6 +77,13 @@
         <activity android:name=".StretchLowerActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".BmiActivity" />
+
+        <!-- 어깨(weight) -->
+        <activity android:name=".WeightShoulderActivity" />
+        <activity android:name=".ShoulderLateralRaiseActivity" />
+        <activity android:name=".ShoulderShoulderPressActivity" />
+        <activity android:name=".ShoulderMilitaryPressActivity" />
+
         <!-- <activity android:name=".FavoritesActivity" /> -->
         <activity android:name=".AfterActivity" />
         <activity android:name=".SearchActivity" />

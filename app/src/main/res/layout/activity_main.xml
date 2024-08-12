@@ -331,7 +331,7 @@
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/shoulder"
+                            app:srcCompat="@drawable/shoulder_weight"
                             android:padding="0sp"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
@@ -360,7 +360,7 @@
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/arm"
+                            app:srcCompat="@drawable/arm_weight"
                             android:padding="0sp"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
@@ -401,7 +401,7 @@
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/chest"
+                            app:srcCompat="@drawable/chest_weight"
                             android:padding="0sp"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
@@ -430,7 +430,7 @@
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/abdominal_muscles"
+                            app:srcCompat="@drawable/back_weight"
                             android:padding="0sp"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
@@ -471,7 +471,7 @@
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/leg"
+                            app:srcCompat="@drawable/leg_weight"
                             android:padding="0sp"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
@@ -500,7 +500,7 @@
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/stretching"
+                            app:srcCompat="@drawable/diet_weight"
                             android:padding="0sp"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>

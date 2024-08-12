@@ -30,6 +30,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ImageButton btn_chest;
     ImageButton btn_leg;
     ImageButton btn_stretch;
+    ImageButton btn_shoulder_weight;
+    ImageButton btn_arm_weight;
+    ImageButton btn_back_weight;
+    ImageButton btn_chest_weight;
+    ImageButton btn_leg_weight;
+    ImageButton btn_diet_weight;
     private long backKeyPressedTime = 0;
 
     @Override
@@ -104,6 +110,65 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(intent);
             }
         });
+
+
+
+        btn_shoulder_weight = findViewById(R.id.sh_w); // 어깨(weight) 페이지
+
+        btn_shoulder_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeightShoulderActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_arm_weight = findViewById(R.id.ar_w); // 팔(weight) 페이지
+
+        btn_arm_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeightArmActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_back_weight = findViewById(R.id.ba_w); // 등(weight) 페이지
+
+        btn_back_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeightBackActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_chest_weight = findViewById(R.id.ch_w); // 가슴(weight) 페이지
+
+        btn_chest_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeightChestActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_leg_weight = findViewById(R.id.le_w); // 하체(weight) 페이지
+
+        btn_leg_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeightLegActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_diet_weight = findViewById(R.id.di_w); // 다이어트(weight) 페이지
+
+        btn_diet_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeightDietActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -172,6 +237,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_profile:
                 Intent intent8 = new Intent(getApplicationContext(), ProfileActivity.class);
                 startActivity(intent8);
+                break;
+            case R.id.nav_weight_shoulder:
+                Intent intent9 = new Intent(getApplicationContext(),WeightShoulderActivity.class);
+                startActivity(intent9);
+                break;
+            case R.id.nav_weight_arm:
+                Intent intent10 = new Intent(getApplicationContext(),WeightArmActivity.class);
+                startActivity(intent10);
+                break;
+            case R.id.nav_weight_chest:
+                Intent intent11 = new Intent(getApplicationContext(),WeightChestActivity.class);
+                startActivity(intent11);
+                break;
+            case R.id.nav_weight_back:
+                Intent intent12 = new Intent(getApplicationContext(),WeightBackActivity.class);
+                startActivity(intent12);
+                break;
+            case R.id.nav_weight_leg:
+                Intent intent13 = new Intent(getApplicationContext(),WeightLegActivity.class);
+                startActivity(intent13);
+                break;
+            case R.id.nav_weight_diet:
+                Intent intent14 = new Intent(getApplicationContext(),WeightDietActivity.class);
+                startActivity(intent14);
                 break;
         }
         DrawerLayout drawerLayout
