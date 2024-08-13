@@ -1,14 +1,10 @@
 package com.example.hometraininghelper;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,19 +14,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class WeightLegActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
+public class LegHipAbductionActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    Button btn_1;
-    Button btn_2;
-    Button btn_3;
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_leg_weight);
+        setContentView(R.layout.activity_leg_hip_abduction);
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.design_navigation_view);
@@ -42,36 +35,6 @@ public class WeightLegActivity extends Activity implements NavigationView.OnNavi
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
-
-        btn_1 = findViewById(R.id.leg_press); // 레그 프레스
-
-        btn_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LegLegPressActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_2 = findViewById(R.id.leg_extension); // 레그 익스텐션
-
-        btn_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LegLegExtensionActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_3 = findViewById(R.id.hip_abduction); // 힙 어브덕션
-
-        btn_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LegHipAbductionActivity.class);
-                startActivity(intent);
-            }
-        });
     }
     @Override
     public void onBackPressed() {
