@@ -86,7 +86,7 @@
                             android:id="@+id/textshoulder1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="레터럴 레이즈(수정)"
+                            android:text="강경원"
                             android:textSize="9pt" />
 
                         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView

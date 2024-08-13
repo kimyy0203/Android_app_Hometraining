@@ -84,6 +84,12 @@
         <activity android:name=".ShoulderShoulderPressActivity" />
         <activity android:name=".ShoulderMilitaryPressActivity" />
 
+        <!-- 팔(weight) -->
+        <activity android:name=".WeightArmActivity" />
+        <activity android:name=".ArmDipsActivity" />
+        <activity android:name=".ArmArmCurlActivity" />
+        <activity android:name=".ArmCablePressDownActivity" />
+
         <!-- <activity android:name=".FavoritesActivity" /> -->
         <activity android:name=".AfterActivity" />
         <activity android:name=".SearchActivity" />

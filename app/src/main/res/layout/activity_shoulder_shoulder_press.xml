@@ -86,7 +86,7 @@
                             android:id="@+id/textshoulder1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="숄더 프레스(수정)"
+                            android:text="핏블리 FITVELY"
                             android:textSize="9pt" />
 
                         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView

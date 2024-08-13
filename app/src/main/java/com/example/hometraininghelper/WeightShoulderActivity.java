@@ -51,7 +51,7 @@ public class WeightShoulderActivity extends Activity implements NavigationView.O
             }
         });
 
-        btn_2 = findViewById(R.id.shoulder_press); // 어깨 중급
+        btn_2 = findViewById(R.id.shoulder_press); // 숄더 프레스
 
         btn_2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +61,7 @@ public class WeightShoulderActivity extends Activity implements NavigationView.O
             }
         });
 
-        btn_3 = findViewById(R.id.military_press); // 어깨 고급
+        btn_3 = findViewById(R.id.military_press); // 밀리터리 프레스
 
         btn_3.setOnClickListener(new View.OnClickListener() {
             @Override

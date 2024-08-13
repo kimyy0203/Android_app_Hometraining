@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".ShoulderMilitaryPressActivity"
+    tools:context=".ArmDipsActivity"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
@@ -43,7 +43,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="30dp"
-                android:text="밀리터리 프레스"
+                android:text="딥스"
                 android:textSize="40dp"
                 android:fontFamily="@font/baloo"
                 app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -59,7 +59,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar"
-                android:src="@drawable/shoulder_weight" />
+                android:src="@drawable/arm_weight" />
 
             <LinearLayout
                 android:id="@+id/linearLayout1"
@@ -83,20 +83,20 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/textshoulder1"
+                            android:id="@+id/textarm1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="핏블리 FITVELY"
+                            android:text="설기관"
                             android:textSize="9pt" />
 
                         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-                            android:id="@+id/shoulder1"
+                            android:id="@+id/arm1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/textshoulder1"
+                            android:layout_below="@id/textarm1"
                             app:autoPlay="false"
                             app:showYouTubeButton="false"
-                            app:videoId="lpc1P_zj3XI" />
+                            app:videoId="gCN2jslhpAM" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
