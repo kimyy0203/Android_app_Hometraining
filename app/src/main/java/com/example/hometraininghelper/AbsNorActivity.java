@@ -86,6 +86,30 @@ public class AbsNorActivity extends Activity implements NavigationView.OnNavigat
                 Intent intent8 = new Intent(getApplicationContext(), ProfileActivity.class);
                 startActivity(intent8);
                 break;
+            case R.id.nav_weight_shoulder:
+                Intent intent9 = new Intent(getApplicationContext(),WeightShoulderActivity.class);
+                startActivity(intent9);
+                break;
+            case R.id.nav_weight_arm:
+                Intent intent10 = new Intent(getApplicationContext(),WeightArmActivity.class);
+                startActivity(intent10);
+                break;
+            case R.id.nav_weight_chest:
+                Intent intent11 = new Intent(getApplicationContext(),WeightChestActivity.class);
+                startActivity(intent11);
+                break;
+            case R.id.nav_weight_back:
+                Intent intent12 = new Intent(getApplicationContext(),WeightBackActivity.class);
+                startActivity(intent12);
+                break;
+            case R.id.nav_weight_leg:
+                Intent intent13 = new Intent(getApplicationContext(),WeightLegActivity.class);
+                startActivity(intent13);
+                break;
+            case R.id.nav_weight_diet:
+                Intent intent14 = new Intent(getApplicationContext(),WeightDietActivity.class);
+                startActivity(intent14);
+                break;
         }
         DrawerLayout drawerLayout
                 = (DrawerLayout) findViewById(R.id.drawer_layout);

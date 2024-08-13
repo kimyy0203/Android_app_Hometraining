@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -16,7 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class LegEasyActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
+public class DietDietMenuActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -25,7 +23,7 @@ public class LegEasyActivity extends Activity implements NavigationView.OnNaviga
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_leg_easy);
+        setContentView(R.layout.activity_diet_diet_menu);
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.design_navigation_view);
