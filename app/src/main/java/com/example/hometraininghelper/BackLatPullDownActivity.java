@@ -1,14 +1,10 @@
 package com.example.hometraininghelper;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,20 +14,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class WeightBackActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
+public class BackLatPullDownActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    Button btn_1;
-    Button btn_2;
-    Button btn_3;
-    Button btn_4;
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_back_weight);
+        setContentView(R.layout.activity_back_lat_pull_down);
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.design_navigation_view);
@@ -43,46 +35,6 @@ public class WeightBackActivity extends Activity implements NavigationView.OnNav
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
-
-        btn_1 = findViewById(R.id.lat_pull_down); // 랫 풀 다운
-
-        btn_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), BackLatPullDownActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_2 = findViewById(R.id.cable_arm_pull_down); // 케이블 암풀다운
-
-        btn_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), BackCableArmPullDownActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_3 = findViewById(R.id.seated_row); // 시티드 로우
-
-        btn_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), BackSeatedRowActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_4 = findViewById(R.id.one_arm_row); // 원 암 로우
-
-        btn_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), BackOneArmRowActivity.class);
-                startActivity(intent);
-            }
-        });
     }
     @Override
     public void onBackPressed() {
