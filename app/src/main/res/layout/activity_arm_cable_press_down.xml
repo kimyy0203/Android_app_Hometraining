@@ -44,7 +44,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="30dp"
                 android:text="케이블 프레스 다운"
-                android:textSize="40dp"
+                android:textSize="30dp"
                 android:fontFamily="@font/baloo"
                 app:layout_constraintEnd_toStartOf="@+id/imageView"
                 app:layout_constraintStart_toStartOf="parent"
