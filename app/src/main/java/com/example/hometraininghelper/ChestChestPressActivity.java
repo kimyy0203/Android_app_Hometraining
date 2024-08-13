@@ -1,14 +1,10 @@
 package com.example.hometraininghelper;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,20 +14,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class WeightChestActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
+public class ChestChestPressActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    Button btn_1;
-    Button btn_2;
-    Button btn_3;
-    Button btn_4;
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chest_weight);
+        setContentView(R.layout.activity_chest_chest_press);
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.design_navigation_view);
@@ -43,46 +35,6 @@ public class WeightChestActivity extends Activity implements NavigationView.OnNa
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
-
-        btn_1 = findViewById(R.id.chest_press); // 체스트 프레스
-
-        btn_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ChestChestPressActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_2 = findViewById(R.id.pec_dec_fly); // 펙 덱 플라이
-
-        btn_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ChestPecDecFlyActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_3 = findViewById(R.id.incline_bench_press); // 인클라인 벤치 프레스
-
-        btn_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ChestInclineBenchPressActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btn_4 = findViewById(R.id.bench_press); // 벤치 프레스
-
-        btn_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ChestBenchPressActivity.class);
-                startActivity(intent);
-            }
-        });
     }
     @Override
     public void onBackPressed() {

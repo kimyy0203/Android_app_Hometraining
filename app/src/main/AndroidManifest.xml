@@ -90,6 +90,13 @@
         <activity android:name=".ArmArmCurlActivity" />
         <activity android:name=".ArmCablePressDownActivity" />
 
+        <!-- 가슴(weight) -->
+        <activity android:name=".WeightChestActivity" />
+        <activity android:name=".ChestChestPressActivity" />
+        <activity android:name=".ChestPecDecFlyActivity" />
+        <activity android:name=".ChestInclineBenchPressActivity" />
+        <activity android:name=".ChestBenchPressActivity" />
+
         <!-- <activity android:name=".FavoritesActivity" /> -->
         <activity android:name=".AfterActivity" />
         <activity android:name=".SearchActivity" />
