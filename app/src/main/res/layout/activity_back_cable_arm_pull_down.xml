@@ -86,7 +86,7 @@
                             android:id="@+id/textback1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="핏블리 FITVELY"
+                            android:text="핏블리 FITVELY (01:00~)"
                             android:textSize="9pt" />
 
                         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView

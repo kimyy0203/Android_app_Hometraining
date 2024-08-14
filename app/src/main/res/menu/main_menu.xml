@@ -42,7 +42,7 @@
         </menu>
     </item>
 
-    <item android:title="운동(헬스)">
+    <item android:title="운동(운동기구)">
         <menu>
             <group android:checkableBehavior="single">
                 <item

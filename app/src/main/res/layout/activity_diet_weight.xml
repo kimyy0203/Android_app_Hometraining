@@ -91,7 +91,11 @@
                             android:text="식단"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="100dp"
+                            android:paddingRight="100dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>

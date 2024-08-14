@@ -91,7 +91,11 @@
                             android:text="체스트 프레스"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -125,7 +129,11 @@
                             android:text="펙 덱 플라이"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -159,7 +167,11 @@
                             android:text="인클라인 벤치 프레스"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="0dp"
+                            android:paddingRight="0dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -193,7 +205,11 @@
                             android:text="벤치 프레스"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>

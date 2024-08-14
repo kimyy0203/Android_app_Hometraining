@@ -91,7 +91,11 @@
                             android:text="레그 프레스"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -125,7 +129,11 @@
                             android:text="레그 익스텐션"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="40dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -159,7 +167,11 @@
                             android:text="힙 어브덕션"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>

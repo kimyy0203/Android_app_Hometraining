@@ -91,7 +91,11 @@
                             android:text="랫 풀 다운"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="45dp"
+                            android:paddingRight="45dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -125,7 +129,11 @@
                             android:text="케이블 암풀다운"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -159,7 +167,11 @@
                             android:text="시티드 로우"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="35dp"
+                            android:paddingRight="35dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -193,7 +205,11 @@
                             android:text="원 암 로우"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="50dp"
+                            android:paddingRight="50dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>

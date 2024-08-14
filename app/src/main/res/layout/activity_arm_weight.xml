@@ -90,7 +90,11 @@
                             android:text="딥스"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="100dp"
+                            android:paddingRight="100dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -124,7 +128,11 @@
                             android:text="암 컬"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="100dp"
+                            android:paddingRight="100dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -157,7 +165,11 @@
                             android:text="케이블 프레스 다운"
                             android:textSize="36sp"
                             app:fontFamily="@font/aclonica"
-                            android:padding="0sp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:background="#E2EEEF"
                             android:scaleType="centerCrop"/>
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
