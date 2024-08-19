@@ -4,7 +4,8 @@
     <item
         android:id="@+id/nav_search"
         android:icon="@drawable/search"
-        android:title="운동 검색" />
+        android:title="운동 검색"
+        android:fontFamily="@font/room"/>
 
     <item android:title="운동(홈트)">
         <menu>
@@ -12,73 +13,87 @@
                 <item
                     android:id="@+id/nav_shoulder"
                     android:icon="@drawable/shouldermenu"
-                    android:title="어깨" />
+                    android:title="어깨"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_arm"
                     android:icon="@drawable/armmenu"
-                    android:title="팔" />
+                    android:title="팔"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_chest"
                     android:icon="@drawable/chestmenu"
-                    android:title="가슴" />
+                    android:title="가슴"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_abodminal_muscles"
                     android:icon="@drawable/absmenu"
-                    android:title="복근" />
+                    android:title="복근"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_leg"
                     android:icon="@drawable/legmenu"
-                    android:title="다리" />
+                    android:title="다리"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_stretching"
                     android:icon="@drawable/stretchmenu"
-                    android:title="스트레칭" />
+                    android:title="스트레칭"
+                    android:fontFamily="@font/room"/>
             </group>
         </menu>
     </item>
 
-    <item android:title="운동(운동기구)">
+    <item android:title="운동(운동기구)"
+        android:fontFamily="@font/room">
         <menu>
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_weight_shoulder"
                     android:icon="@drawable/shouldermenu"
-                    android:title="어깨" />
+                    android:title="어깨"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_weight_arm"
                     android:icon="@drawable/armmenu"
-                    android:title="팔" />
+                    android:title="팔"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_weight_chest"
                     android:icon="@drawable/chestmenu"
-                    android:title="가슴" />
+                    android:title="가슴"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_weight_back"
                     android:icon="@drawable/backmenu"
-                    android:title="등" />
+                    android:title="등"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_weight_leg"
                     android:icon="@drawable/legmenu"
-                    android:title="하체" />
+                    android:title="하체"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_weight_diet"
                     android:icon="@drawable/dietmenu"
-                    android:title="다이어트" />
+                    android:title="다이어트"
+                    android:fontFamily="@font/room"/>
             </group>
         </menu>
     </item>
 
-    <item android:title="프로필">
+    <item android:title="프로필"
+        android:fontFamily="@font/room">
 
         <menu>
 
@@ -87,12 +102,14 @@
                 <item
                     android:id="@+id/nav_login"
                     android:icon="@drawable/login"
-                    android:title="로그인" />
+                    android:title="로그인"
+                    android:fontFamily="@font/room"/>
 
                 <item
                     android:id="@+id/nav_profile"
                     android:icon="@drawable/profile"
-                    android:title="마이페이지" />
+                    android:title="마이페이지"
+                    android:fontFamily="@font/room"/>
 
             </group>
         </menu>

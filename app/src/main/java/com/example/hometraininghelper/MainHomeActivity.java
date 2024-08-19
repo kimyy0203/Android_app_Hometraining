@@ -8,7 +8,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,25 +15,27 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainHomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    Button btn_home;
-    Button btn_weight;
+    ImageButton btn_shoulder;
+    ImageButton btn_arm;
+    ImageButton btn_abs;
+    ImageButton btn_chest;
+    ImageButton btn_leg;
+    ImageButton btn_stretch;
     private long backKeyPressedTime = 0;
 
-    @SuppressLint({"MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_main);
+        setContentView(R.layout.activity_main_home);
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.design_navigation_view);
@@ -47,53 +48,70 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        btn_home = findViewById(R.id.home_training); // 홈 트레이닝 메인
+        btn_shoulder = findViewById(R.id.bus); // 어깨 페이지
 
-        btn_home.setOnClickListener(new View.OnClickListener() {
+        btn_shoulder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainHomeActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ShoulderActivity.class);
                 startActivity(intent);
             }
         });
 
-        btn_weight = findViewById(R.id.weight_training); // 웨이트 트레이닝 메인
+        btn_arm = findViewById(R.id.imageView3); // 팔 페이지
 
-        btn_weight.setOnClickListener(new View.OnClickListener() {
+        btn_arm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainWeightActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ArmActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_abs = findViewById(R.id.train); // 복근 페이지
+
+        btn_abs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AbsActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_chest = findViewById(R.id.bus1); // 가슴 페이지
+
+        btn_chest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ChestActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_leg = findViewById(R.id.cycle); // 다리 페이지
+
+        btn_leg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LegActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_stretch = findViewById(R.id.airplane); // 스트레칭 페이지
+
+        btn_stretch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), StretchActivity.class);
                 startActivity(intent);
             }
         });
     }
 
     @Override
-    public void onBackPressed()  {
-        if (System.currentTimeMillis() > backKeyPressedTime + 2500) {
-            backKeyPressedTime = System.currentTimeMillis();
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setMessage("정말로 종료하시겠습니까?");
-            builder.setTitle("종료 알림창")
-                    .setCancelable(false)
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int i) {
-                            moveTaskToBack(true);
-                            finish();
-                            android.os.Process.killProcess(android.os.Process.myPid());
-                        }
-                    })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int i) {
-                            dialog.cancel();
-                        }
-                    });
-            AlertDialog alert = builder.create();
-            alert.setTitle("종료 알림창");
-            alert.show();
-            return;
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
         }
     }
 

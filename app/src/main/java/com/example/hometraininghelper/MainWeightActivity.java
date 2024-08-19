@@ -8,7 +8,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,25 +15,27 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainWeightActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-    Button btn_home;
-    Button btn_weight;
+    ImageButton btn_shoulder_weight;
+    ImageButton btn_arm_weight;
+    ImageButton btn_back_weight;
+    ImageButton btn_chest_weight;
+    ImageButton btn_leg_weight;
+    ImageButton btn_diet_weight;
     private long backKeyPressedTime = 0;
 
-    @SuppressLint({"MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_main);
+        setContentView(R.layout.activity_main_weight);
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.design_navigation_view);
@@ -47,53 +48,70 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
 
-        btn_home = findViewById(R.id.home_training); // 홈 트레이닝 메인
+        btn_shoulder_weight = findViewById(R.id.sh_w); // 어깨(weight) 페이지
 
-        btn_home.setOnClickListener(new View.OnClickListener() {
+        btn_shoulder_weight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainHomeActivity.class);
+                Intent intent = new Intent(getApplicationContext(), WeightShoulderActivity.class);
                 startActivity(intent);
             }
         });
 
-        btn_weight = findViewById(R.id.weight_training); // 웨이트 트레이닝 메인
+        btn_arm_weight = findViewById(R.id.ar_w); // 팔(weight) 페이지
 
-        btn_weight.setOnClickListener(new View.OnClickListener() {
+        btn_arm_weight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainWeightActivity.class);
+                Intent intent = new Intent(getApplicationContext(), WeightArmActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_back_weight = findViewById(R.id.ba_w); // 등(weight) 페이지
+
+        btn_back_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeightBackActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_chest_weight = findViewById(R.id.ch_w); // 가슴(weight) 페이지
+
+        btn_chest_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeightChestActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_leg_weight = findViewById(R.id.le_w); // 하체(weight) 페이지
+
+        btn_leg_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeightLegActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn_diet_weight = findViewById(R.id.di_w); // 다이어트(weight) 페이지
+
+        btn_diet_weight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WeightDietActivity.class);
                 startActivity(intent);
             }
         });
     }
 
     @Override
-    public void onBackPressed()  {
-        if (System.currentTimeMillis() > backKeyPressedTime + 2500) {
-            backKeyPressedTime = System.currentTimeMillis();
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setMessage("정말로 종료하시겠습니까?");
-            builder.setTitle("종료 알림창")
-                    .setCancelable(false)
-                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int i) {
-                            moveTaskToBack(true);
-                            finish();
-                            android.os.Process.killProcess(android.os.Process.myPid());
-                        }
-                    })
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int i) {
-                            dialog.cancel();
-                        }
-                    });
-            AlertDialog alert = builder.create();
-            alert.setTitle("종료 알림창");
-            alert.show();
-            return;
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
         }
     }
 
