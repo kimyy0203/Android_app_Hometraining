@@ -26,7 +26,7 @@ public class AbsNorActivity extends Activity implements NavigationView.OnNavigat
     NavigationView navigationView;
     Toolbar toolbar;
 
-    /* 해당 onCreate 메서드는 복근 초급에 해당되는 영상을 보여주는 레이아웃을 설정하여, 해당 영상을 볼 수 있도록한다.
+    /* 해당 onCreate 메서드는 복근 중급에 해당되는 영상을 보여주는 레이아웃을 설정하여, 해당 영상을 볼 수 있도록한다.
     또한 드로어 메뉴와 툴바의 상호 작용을 설정하여, 메인 메뉴 화면이 아니라 다른 화면에서도 사용자가 원하는 운동 부위로 넘어갈 수 있는
     기능을 제공한다. */
     @Override
