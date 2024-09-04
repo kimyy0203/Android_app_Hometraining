@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- AndroidManifest.xml 파일은 앱의 전체적인 설정, 권한 그리고 중요한 컴포넌트를 정의한다. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.hometraininghelper">
-
+<!-- hometraininghelper는 이 애플리케이션의 고유 이름, 패키지 앱 식별 시 사용한다. -->
     <uses-permission android:name="android.permission.INTERNET"/>
-
+    <!-- android.permission.INTERNET : 이 권한은 인터넷 연결 권한을 요청한다. 앱이 네트워크와 상호작용할 수 있다. -->
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -14,13 +15,24 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+    <!-- android:allowBackup="true" : 사용자의 데이터를 백업할 수 있도록 허용한다. 앱이 재설치되거나 기기가 초기화될 때 데이터가 복원될 수 있다.
+         android:icon="@drawable/logo" : res/drawable 디렉토리 내의 logo 이미지 리소스를 참조한다.
+         android:label="@string/app_name" : 앱의 이름을 app_name에 string 변수로 저장되어있는 이름을 사용한다.
+         android:usesCleartextTraffic="true" : 앱이 HTTP와 같은 명확한 텍스트 트래픽을 허용한다 HTTPS가 아닌 URL에 접근할 수 있다.
+         android:name=".CustomApplication" : android:name 속성은 일반적으로 애플리케이션의 구성 요소를 정의할 때 사용된다.
+            ".CustomApplication" : 사용자 정의 Application 클래스를 지정한다. 애플리케이션이 시작될 때 Android 프레임워크가
+            기본 Application 클래스 대신 CustomApplication 클래스를 사용하도록 지시한다.
+            <CustomApplication을 사용하는 이유>
+            1. 전역 상태 관리 : 애플리케이션 전역에서 사용되는 데이터를 관리하거나, 초기화 작업을 수행하기 위해 사용
+            2. 애플리케이션 생명 주기 제어: onCreate, onTerminate, onLowMemory와 같은 메서드를 재정의하여
+                                        애플리케이션 생명 주기 동안 특정 작업 수행할 수 있다.
+         android:roundIcon="@mipmap/ic_main_round" : 라운드 아이콘 설정
+         android:supportsRtl="true" : 앱이 RTL(오른쪽에서 왼쪽으로 쓰는 언어)을 지원한다.
+         android:theme="@style/AppTheme" : 앱의 기본 테마를 res/values/styles.xml에 정의된 AppTheme로 설정한다.-->
         <activity android:name=".LoginActivity"> </activity>
         <activity android:name=".SubActivity"></activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity">
-
-        </activity>
-
+        <activity android:name=".MainActivity"/>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,13 +41,31 @@
             </intent-filter>
 
         </activity>
-
+        <!-- activity 태그 : 이 태그는 애플리케이션의 액티비티를 정의한다. 액티비티는 사용자 인터페이스를 관리하며, 사용자가 앱과 상호작용하는 주요 창이다.
+             intent-filter 태그 : 이 태그는 특정 조건에 따라 이 액티비티가 호출되도록 설정하는데 사용된다(예)앱이 처음 시작될 때 표시할 액티비티를 정의, 특정 작업에 반응).
+             action 태그 : 이 태그는 인텐트의 작업 정의한다. android.intent.action.MAIN은 앱이 실행될 때 첫 번째로 호출되는 기본 액티비티를 나타낸다.
+             category 태그 : 이 태그는 인텐트의 카테고리를 정의한다. android.intent.category.LAUNCHER는 이 액티비티가 런처에 표시되며, 사용자가 앱을 시작할 때 실행된다는 것을 의미합니다.
+             LoginActivity, SubActivity, RegisterActivity, MainActivity라는 네 가지 액티비티가 정의되어 있다.
+             SplashActivity는 애플리케이션이 처음 실행될 때 표시되는 스플래시 화면을 나타내는 것으로 보인다.
+             intent-filter를 통해 이 액티비티가 앱의 시작 액티비티임을 지정하고 있다.
+             android.intent.action.MAIN은 이 액티비티가 앱의 진입점임을 의미한다.
+             android.intent.category.LAUNCHER는 이 액티비티가 런처 아이콘을 통해 시작될 수 있음을 나타낸다.-->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <!-- android:resource="@array/preloaded_fonts" : 리소스 파일에서 정의된 폰트 배열 참조한다. -->
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
-        <activity android:name="com.facebook.FacebookActivity" android:configChanges= "keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="@string/app_name" />
+        <!--Facebook SDK에 애플리케이션의 Facebook App ID를 전달한다. 이 ID는 Facebook과의 통신을 위해 필요하다.-->
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges= "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <!-- FacebookActivity는 Facebook 로그인이나 공유 등의 작업을 처리하는 기본 액티비티이다.
+             android:configChanges: 이 속성은 지정된 구성 변경사항(예: 화면 회전, 키보드 변경 등)이 발생했을 때,
+                액티비티를 재시작하지 않고 직접 처리하도록 지정한다.
+             android:label="@string/app_name" : 이름을 "HomeTrainingHelper"로 설정한다.-->
         <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+        <!-- CustomTabActivity는 Facebook 로그인 시 브라우저에서 인증을 처리하는 액티비티이다.
+             android:exported="true": 이 속성은 다른 앱이 이 액티비티를 호출할 수 있도록 허용한다.-->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -43,13 +73,19 @@
                 <data android:scheme="@string/fb_login_protocol_scheme"
                     tools:ignore="AppLinkUrlError" />
             </intent-filter>
+            <!-- intent-filter: 이 필터는 Facebook 로그인 프로토콜을 처리하도록 설정합니다.
+            여기서 fb_login_protocol_scheme는 strings.xml에서 정의된 값으로,
+            Facebook 로그인 시 특정 URL 스킴을 처리하는 데 사용한다.-->
         </activity>
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="63a090dfffb5b8ef3255ea2f2a67ed49" />
         <!--android:value="d546f0ea15476db798ff89f1e7a1e45f"-->
+        <!--  Kakao SDK에 애플리케이션의 Kakao App Key를 전달합니다.
+        이 키는 Kakao Developer Console에서 발급받은 앱 키로, Kakao API를 사용할 때 필요하다. -->
 
+        <!-- 홈트 앱 화면 담당 정의 -->
         <activity android:name=".ArmEasyActivity" />
         <activity android:name=".ArmNorActivity" />
         <activity android:name=".ArmHardActivity" />
@@ -78,6 +114,7 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".BmiActivity" />
 
+        <!-- 웨이트 앱 화면 담당 정의 -->
         <!-- 어깨(weight) -->
         <activity android:name=".WeightShoulderActivity" />
         <activity android:name=".ShoulderLateralRaiseActivity" />
@@ -123,5 +160,4 @@
         <activity android:name=".SearchActivity" />
 
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
