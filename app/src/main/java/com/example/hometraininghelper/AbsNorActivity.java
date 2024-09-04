@@ -19,7 +19,7 @@ import com.google.android.material.navigation.NavigationView;
 /* 해당 액티비티 클래스는 홈트 운동 부위 중에 복근에 해당하는 중급 부분이다.
 이 클래스는 특별한 동작 없이 단순히 복근 중급에 해당되는 레이아웃을 연결하여 관련된 유튜브 영상을 볼 수 있도록하며,
 드로어 메뉴를 생성하고 설정하여, 이 해당 화면에서도 다른 운동 부위로 넘어가거나 다른 옵션 메뉴를 사용할 수 있도록 한다. */
-public class AbsNorActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener{
+public class AbsNorActivity extends Activity implements NavigationView.OnNavigationItemSelectedListener {
 
     // 드로어 메뉴를 구성하기 위해 필요한 3가지 객체 생성
     DrawerLayout drawerLayout;
@@ -30,17 +30,17 @@ public class AbsNorActivity extends Activity implements NavigationView.OnNavigat
     또한 드로어 메뉴와 툴바의 상호 작용을 설정하여, 메인 메뉴 화면이 아니라 다른 화면에서도 사용자가 원하는 운동 부위로 넘어갈 수 있는
     기능을 제공한다. */
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         // 아래 내용은 AbsActivity에 있는 드로어 구성하는 부분과 동일하므로 해당 클래스 참고 바람
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abs_nor);
 
-        drawerLayout=findViewById(R.id.drawer_layout);
-        navigationView=findViewById(R.id.design_navigation_view);
-        toolbar=findViewById(R.id.toolbar);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.design_navigation_view);
+        toolbar = findViewById(R.id.toolbar);
 
         navigationView.bringToFront();
-        ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.naviagtion_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.naviagtion_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -60,7 +60,7 @@ public class AbsNorActivity extends Activity implements NavigationView.OnNavigat
 
     /* 화면 왼쪽 상단 메뉴 동작 구현 */
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nav_search: // 운동 검색
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/c/LeapFitnessOfficial"));
                 startActivity(intent);
