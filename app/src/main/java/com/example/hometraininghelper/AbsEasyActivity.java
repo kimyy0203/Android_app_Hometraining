@@ -31,10 +31,10 @@ public class AbsEasyActivity extends Activity implements NavigationView.OnNaviga
     기능을 제공한다. */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // 아래 내용은 AbsActivity에 있는 드로어 구성하는 부분과 동일하므로 해당 클래스 참고 바람
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abs_easy);
+        super.onCreate(savedInstanceState); // 부모 클래스의 onCreate 메서드를 호출하여 기본적인 초기화를 수행한다.
+        setContentView(R.layout.activity_abs_easy); // 현재 액티비티의 레이아웃을 activity_abs_easy.xml로 설정한다.
 
+        // 아래 내용은 AbsActivity에 있는 드로어 메뉴 구성하는 부분과 동일하므로 해당 클래스 참고 바람
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.design_navigation_view);
         toolbar = findViewById(R.id.toolbar);
