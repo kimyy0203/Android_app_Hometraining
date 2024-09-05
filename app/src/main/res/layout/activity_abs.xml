@@ -9,7 +9,7 @@
     tools:context=".AbsActivity"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
-<!--<androidx.drawerlayout.widget.DrawerLayout> : DrawerLayout은 내비게시연 드로어를 구현할 때 사용하는 레이아웃이다.
+<!--<androidx.drawerlayout.widget.DrawerLayout> : DrawerLayout은 내비게이션 드로어를 구현할 때 사용하는 레이아웃이다.
     여기서 드로어는 앱의 측면에서 열리는 메뉴이다.
     android:id="@+id/drawer_layout" : 이 레이아웃에 ID를 부여하여 코드에서 참조할 수 있도록 한다.
     tools:context=".AbsActivity" : 이 레이아웃이 어느 액티비티와 연결되는지 나타낸다.-->
