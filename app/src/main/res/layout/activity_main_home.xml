@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--HOME TRAINING 버튼을 눌렀을때 나오는 메인 화면 XML
+    어깨, 팔, 가슴, 복근, 다리, 스트레칭 버튼을 누를 수 있다.-->
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

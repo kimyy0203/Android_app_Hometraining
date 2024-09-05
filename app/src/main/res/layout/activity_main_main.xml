@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--앱의 메인(시작) 화면 XML이다.
+    activity_main.xml과 혼동하지 않게 유의
+    HOME TRAINING, WEIGHT TRAINING 버튼을 통해 원하는 운동 영상을 볼 수 있다.
+    HOME TRAINING : 해당 운동부위를 초급, 중급, 상급으로 나누어 영상 시청 가능
+    WEIGHT TRAINGING : 해당 운동부위에 관련된 운동기구 영상을 나누어 영상 시청 가능-->
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

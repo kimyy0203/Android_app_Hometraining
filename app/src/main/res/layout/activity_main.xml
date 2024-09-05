@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--HOME TRAINING, WEIGHT TRAINING 두 파트로 나누기 전 모든 항목을 보여주는 화면 XML
+    이 앱에는 사용하지 않고 있고, 예비 데이터로 존재하고 있음.-->
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

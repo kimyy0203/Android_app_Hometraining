@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--측면에서 열리는 메뉴 header-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="200dp"
