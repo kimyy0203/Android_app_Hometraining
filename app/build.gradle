@@ -54,7 +54,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5' // 유튜브 영상 재생 라이브러리
     implementation 'com.google.android.gms:play-services-auth:17.0.0' // 구글
     implementation 'com.facebook.android:facebook-login:[5,6)' // 페이스북 SDK (기존)
     // implementation 'com.facebook.android:facebook-android-sdk:latest.release' // 페이스북 SDK (최신)
